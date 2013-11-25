@@ -1,0 +1,17 @@
+/* IE 8 Stylesheet */
+@charset "UTF-8";
+
+.slider-right,
+.slider-left { width: 26px; }
+
+.region-uws-main-navigation .nice-menu li a { padding-top: 12px; }
+
+#uws-library-header-external-search  #uws-search-button { padding-right:45px; }
+
+.uws-library-external-search-filter-container .uws-filter-container-selected .uws-filter-container-s { left: 16px; }
+
+.uws_footer_links #block-menu-menu-uws-footer-links .content .menu li { background-position-y: 3px; }
+
+#uws-library-header-external-search #uws-search-form { width: 321px; }
+
+.uws_footer_links .menu li { background-position-y: 4px; }

@@ -1,0 +1,33 @@
+/* ---------- General Print Layout ---------- */
+body,
+input,
+textarea,
+select { color: #000; background: none; }
+
+body { width: 960px; }
+
+#uws-print-logo { display: inline-block; }
+
+.clear { clear: both; }
+
+.uws-library-header,
+.uws-quick-links-relative,
+#uws-quickLinks-toggle-form-container,
+.region-uws-online-librarian-chat,
+#breadcrumb,
+#glossary-box,
+#uws-library-BJA-search,
+.uws-library-content-sidebar-left,
+.uws-library-content-sidebar-right,
+.navigation,
+#toolbar,
+#uws-library-footer,
+.tabs,
+.add-or-remove-shortcuts,
+ul.action-links,
+#comments .title,
+#comments form,
+.comment_forbidden { display: none; }
+.uws-library-body-center-row-container { width: 100%; }
+
+.no-print { display: none; }

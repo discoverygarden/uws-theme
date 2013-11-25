@@ -1,0 +1,18 @@
+/* IE 9 Stylesheet */
+@charset "UTF-8";
+
+#uws-quickLinks-toggle-trigger { padding-right: 21px; }
+
+.uws_footer_links #block-menu-menu-uws-footer-links .content .menu li { background-position-y: 3px; }
+
+#uws-library-header-social-media { margin-left: 3px; padding-top: 11px; }
+
+#uws-quickLinks-toggle-trigger { padding-left: 14px; padding-right: 17px; }
+
+.region-uws-main-navigation .nice-menu { margin-top: 1px; }
+.region-uws-main-navigation .nice-menu > li { padding-top: 1px; }
+.region-uws-main-navigation .nice-menu li a { padding-top: 10px; }
+
+.uws_footer_links .menu li { background-position-y: 4px; }
+
+#uws-library-header-external-search #uws-search-button { background-position-x: 65px; padding-right: 33px; }

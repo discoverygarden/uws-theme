@@ -1,0 +1,222 @@
+/* Frontpage and Views */
+
+.submit-collection, .submit-collection-anon, .questions-block {
+  background: #00BAB9;
+  float: right;
+  font-size: 130%;
+  font-weight: normal;
+  height: 80px;
+  width: 60%;
+  max-width: 360px;  
+  line-height: 3.2em;
+  margin-bottom: 0;
+}
+.submit-collection a, .submit-collection-anon a {
+  color: #FFFFFF;
+  margin-left: 3.2em;
+  display: block;
+  margin-top: 0.35em;
+}
+.submit-collection a:hover, .submit-collection-anon a:hover {
+	color: #444
+}
+
+.questions-block {
+  background: #fff;
+  border: 1px solid #999;
+  margin-top: 1em;
+}
+.questions-block p {
+
+}
+.questions-block ul {
+	margin: 0.5em 0 0;
+	padding: 0 0 0 1.5em;
+}
+.questions-block ul li {
+	display: inline;	
+	font-size: 70%;
+	margin-right: 1.5em;
+}
+.questions-block li.questions {
+	display: block;
+	line-height: 1.5em;
+	font-size: 95%;
+	padding-bottom: 2px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: -20px;
+}
+.questions-block ul li a {
+	color: #555;	
+}
+.questions-block ul li a:hover {
+	color: #000;
+}
+
+.view-frontpage {
+	max-width: 60%;
+	float: left;
+}
+
+#block-views-featured-collections-block {
+	float: left;
+	display: block;
+	margin-bottom: 3.3em;
+	border-top: 1px solid #D3D7D9;
+	padding-top: 2em;
+}
+#block-views-featured-collections-block .views-row {
+	max-width: 45%;
+	float: left;
+}
+#block-views-featured-collections-block .views-row-first {
+	margin-right: 1.5em;
+}
+#block-views-featured-collections-block h2 {
+	margin-bottom: 0.5em;
+}
+#block-views-featured-collections-block h3 {
+	font-size: 105%;
+	line-height: 1.2em;
+	margin-bottom: 0.5em;
+}
+#block-views-featured-collections-block p {
+	font-size: 90%;
+	line-height: 1.3em;
+}
+
+/* Islandora Searches */
+
+a.browse, a.adv-search {
+	text-decoration: underline;
+	margin-right: 0.5em;
+	font-size: 80%;
+}
+
+#edit-islandora-simple-search-query--2 {
+	width: 74%;
+}
+
+.breadcrumb {
+	position: relative;
+	top: 1.5em;
+	font-size: 75%;
+	left: 10px;
+}
+
+/*Solr search results pages */
+
+#edit-islandora-simple-search-query {
+	width:74%;
+}
+
+#block-islandora-solr-display-switch {
+  float: right;
+  left: 5px;
+  opacity: 0.5;
+  position: relative;
+  top: -15px;
+}
+#block-islandora-solr-display-switch ul li {
+  float: left;
+  list-style: none;
+}
+.islandora-solr-display li a {
+  padding: 0 2px;
+}
+
+.islandora-solr-display a.display-default, .islandora-solr-display a.display-grid, .islandora-solr-display a.display-table, .islandora-view-grid, .islandora-view-list {
+  background: url("/sites/all/themes/uws_library_AR/images/islandora/display-grid-list.png") no-repeat scroll left top transparent;
+  display: inline-block;
+  height: 22px;
+  outline: medium none;
+  text-indent: -9999px;
+  width: 22px;
+}
+
+.islandora-solr-display a.display-grid, .islandora-view-grid {
+  background: url("/sites/all/themes/uws_library_AR/images/islandora/display-grid.png") no-repeat scroll left top transparent;
+}
+
+dl.solr-thumb {
+	display: none;
+}
+
+dl.solr-fields {
+  float: left;
+  width: 100%;
+}
+
+.item-list .pager {
+  text-align: right;
+}
+
+.solr-fields dt, .solr-fields dd {
+	border: 0 none;  
+}
+
+/* Facets and Sorts */
+
+.uws-library-content-sidebar-left a:link, .uws-library-content-sidebar-left a:visited {
+	color: #0071B3;
+}
+.uws-library-content-sidebar-left a:hover, .uws-library-content-sidebar-left a:active {
+	color: #018FE2;
+}
+
+.block-islandora-solr h3 {
+	font-size: 120%;
+}
+
+
+/* UWS Theme over rides */
+
+.front.one-sidebar #content {
+	width: 100%;
+}
+
+.uws-library-footer {
+	clear: both;
+}
+
+#main {
+	margin-bottom: 0;
+}
+
+.front .node-teaser {
+	border: 0 none;	
+}
+.front .node-teaser h2 {
+	padding-top: 0;
+	margin-top: -10px;
+}
+
+.uws-research-login {
+	float: right;
+	font-size: 80%;
+	margin-top: 1.35em;
+	cursor: pointer;
+}
+
+.uws-library-content-sidebar-left ul {
+	list-style: circle;
+}
+
+#uws-library-header-external-search {
+  height: 111px;
+  padding-left: 20px;
+  padding-top: 80px;
+  position: relative;
+}
+
+.uws-library-content-sidebar-left {
+	margin: 15px 10px 0 10px;
+}
+
+#cboxLoadedContent h1.title, .uws-library-body-center-row-container h1.title {
+  font-size: 20px !important;
+}
+
+#cboxLoadedContent, .uws-library-body-center-row-container {
+  padding-bottom: 20px;
+}
