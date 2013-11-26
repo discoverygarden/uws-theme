@@ -110,6 +110,16 @@ a.browse, a.adv-search {
 	width:74%;
 }
 
+.islandora-basic-collection-wrapper {
+	position: relative;
+	top: -33px;
+}
+
+
+.islandora-basic-collection-display-switch {
+	opacity: 0.5;
+}
+
 #block-islandora-solr-display-switch {
   float: right;
   left: 5px;

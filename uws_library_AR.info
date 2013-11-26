@@ -12,6 +12,7 @@ stylesheets[all][] = css/960_24_col.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/islandora.css
 stylesheets[all][] = css/colorbox.css
+stylesheets[all][] = css/nice_menus.css
 
 regions[horizontal_menu] = UWS Library Main Menu
 regions[viewslider]= UWS Library View Slider

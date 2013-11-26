@@ -39,7 +39,7 @@
 			"file": "css/islandora.css",
 			"settings":
 			{
-				"buffer_size": 2686,
+				"buffer_size": 4107,
 				"line_ending": "Unix"
 			}
 		},
@@ -47,7 +47,7 @@
 			"file": "css/layout.css",
 			"settings":
 			{
-				"buffer_size": 30884,
+				"buffer_size": 30904,
 				"line_ending": "Unix"
 			}
 		},
@@ -63,7 +63,7 @@
 			"file": "templates/page.tpl.php",
 			"settings":
 			{
-				"buffer_size": 8643,
+				"buffer_size": 8675,
 				"line_ending": "Unix"
 			}
 		},
@@ -79,7 +79,7 @@
 			"file": "templates/page--front.tpl.php",
 			"settings":
 			{
-				"buffer_size": 5803,
+				"buffer_size": 5815,
 				"line_ending": "Unix"
 			}
 		}
@@ -202,6 +202,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"breadcr",
+			"breadcrumb",
+			"uws-library-body",
+			"content",
 			"uws-search-form",
 			"library-header",
 			"logo-container",
@@ -299,7 +303,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -314,8 +318,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								788,
+								788
 							]
 						],
 						"settings":
@@ -334,15 +338,15 @@
 					"file": "css/islandora.css",
 					"settings":
 					{
-						"buffer_size": 2686,
+						"buffer_size": 4107,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2211,
-								2211
+								1975,
+								1975
 							]
 						],
 						"settings":
@@ -350,7 +354,7 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 861.0,
+						"translation.y": 1548.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -360,15 +364,15 @@
 					"file": "css/layout.css",
 					"settings":
 					{
-						"buffer_size": 30884,
+						"buffer_size": 30904,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								19643,
+								19643
 							]
 						],
 						"settings":
@@ -377,7 +381,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 16770.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -414,15 +418,15 @@
 					"file": "templates/page.tpl.php",
 					"settings":
 					{
-						"buffer_size": 8643,
+						"buffer_size": 8675,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4074,
-								4079
+								4495,
+								4495
 							]
 						],
 						"settings":
@@ -431,7 +435,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1043.0,
+						"translation.y": 1373.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -468,15 +472,15 @@
 					"file": "templates/page--front.tpl.php",
 					"settings":
 					{
-						"buffer_size": 5803,
+						"buffer_size": 5815,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4946,
-								4946
+								4986,
+								4986
 							]
 						],
 						"settings":
@@ -486,7 +490,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1532.0,
+						"translation.y": 1037.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

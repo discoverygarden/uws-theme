@@ -2,16 +2,16 @@
 
 /* Below should fix menu being a few pixels away in some themes, and menus disappearing behind other stuff. */
 .block-nice-menus { line-height: normal; z-index: 10; }
-#block-nice-menu-1 .content .menu li {
+#block-nice-menus-1 .content .menu li {
 	display: inline-block;
 	float: left;
-	font-size: 22px;
+	font-size: 16px;
 	margin: 0;
 	min-width: 158px;
 	padding: 0;
 }
 
-#block-nice-menu-1 .content .menu li a {
+#block-nice-menus-1 .content .menu li a {
 	color: #FEFEFE;
 	display: block;
 	text-align: center;
@@ -19,7 +19,14 @@
 	text-decoration: none;
 }
 
-#nice-menu-1 li { float:left; }
+#nice-menu-1 li { float:left; border: none; }
+
+#nice-menu-1 {
+	width: auto;
+	position: relative;
+	top: -51px;
+	border-top: 0 none;
+}
 
 /* Repeat all this stuff just for Garland headers. */
 #uws_main_navigation-container ul.nice-menu li:hover ul,
@@ -70,73 +77,73 @@
 }
 ************* seems to be not used*/
 
-#uws_main_navigation-container #nice-menu-1 .menu-1529.sfHover {
+#uws_main_navigation-container #nice-menu-1 .menu-491.sfHover {
 	background: url("../images/uws-main-nav-resources-hover-ico.png") no-repeat scroll 13px 12px #00bab9;
 	top: 1.5px;
 	height: 46px;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-1529.active-trail {
+#uws_main_navigation-container #nice-menu-1 .menu-491.active-trail {
 	background: url("../images/uws-main-nav-resources-hover-ico.png") no-repeat scroll 13px 12px #00bab9;
  	top: 1.5px;
  	height: 46px;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-683.sfHover {
+#uws_main_navigation-container #nice-menu-1 .menu-492.sfHover {
 	background: url('../images/uws-main-nav-services-hover-ico.png') no-repeat  24px 13px #ff9a00;
 	top: 1.5px;
 	height: 46px;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-683.active-trail {
+#uws_main_navigation-container #nice-menu-1 .menu-492.active-trail {
 	background: url('../images/uws-main-nav-services-hover-ico.png') no-repeat  24px 13px #ff9a00;
 	top: 1.5px;
 	height: 46px;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-692.sfHover {
+#uws_main_navigation-container #nice-menu-1 .menu-493.sfHover {
 	background: url('../images/uws-main-nav-guides-hover-ico.png') no-repeat scroll 27px 12px #8cbe4f;
 	top: 1.5px;
 	height: 46px;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-692.active-trail {
+#uws_main_navigation-container #nice-menu-1 .menu-493.active-trail {
 	background: url('../images/uws-main-nav-guides-hover-ico.png') no-repeat scroll 27px 12px #8cbe4f;
 	top: 1.5px;
 	height: 46px;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-693.sfHover{
+#uws_main_navigation-container #nice-menu-1 .menu-494.sfHover{
 	background: url('../images/uws-main-nav-research-hover-ico.png') no-repeat scroll 11px 11px #f02233;
 	top: 1.5px;
 	height: 46px;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-693.active-trail{
+#uws_main_navigation-container #nice-menu-1 .menu-494.active-trail{
 	background: url('../images/uws-main-nav-research-hover-ico.png') no-repeat scroll 11px 11px #f02233;
 	top: 1.5px;
 	height: 46px;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-684.sfHover {
+#uws_main_navigation-container #nice-menu-1 .menu-495.sfHover {
 	background: url('../images/uws-main-nav-about-us-hover-ico.png') no-repeat scroll 21px 14px #8e7fdf;
 	top: 1.5px;
 	height: 46px;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-684.active-trail {
+#uws_main_navigation-container #nice-menu-1 .menu-495.active-trail {
 	background: url('../images/uws-main-nav-about-us-hover-ico.png') no-repeat scroll 21px 14px #8e7fdf;
 	top: 1.5px;
 	height: 46px;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-1362.sfHover {
+#uws_main_navigation-container #nice-menu-1 .menu-496.sfHover {
 	background: url('../images/uws-main-nav-help-hover-ico.png') no-repeat scroll 37px 11px #3185ea;
 	top: 1.5px;
 	height: 46px;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-1362.active-trail {
+#uws_main_navigation-container #nice-menu-1 .menu-496.active-trail {
 	background:url('../images/uws-main-nav-help-hover-ico.png') no-repeat scroll 37px 11px #3185ea;
 	top: 1.5px;
 	height: 46px;
@@ -150,50 +157,50 @@
 	position: absolute;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-1529 ul {
+#uws_main_navigation-container #nice-menu-1 .menu-491 ul {
 	background: none repeat scroll 0 0 #00BAB9;
 	width: 182px;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-683 ul {
+#uws_main_navigation-container #nice-menu-1 .menu-492 ul {
 	background: none repeat scroll 0 0 #FCD291;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-692 ul {
+#uws_main_navigation-container #nice-menu-1 .menu-493 ul {
     background: none repeat scroll 0 0 #8CBE4F;
     width: 146px;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-693 ul {
+#uws_main_navigation-container #nice-menu-1 .menu-494 ul {
 	background: none repeat scroll 0 0 #F02233;
 	width: 170px;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-684 ul {
+#uws_main_navigation-container #nice-menu-1 .menu-495 ul {
 	background: none repeat scroll 0 0 #8e7fdf;
 	width: 168px;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-1362 ul { 
+#uws_main_navigation-container #nice-menu-1 .menu-496 ul { 
 	background: none repeat scroll 0 0 #3185ea;
 	width: 122px;
 }
 
 /* Width of sub-menus */
 
-#uws_main_navigation-container #nice-menu-1 .menu-1529 ul,
-#uws_main_navigation-container #nice-menu-1 .menu-1529 ul li,
-#uws_main_navigation-container #nice-menu-1 .menu-683 ul,
-#uws_main_navigation-container #nice-menu-1 .menu-683 ul li,
-#uws_main_navigation-container #nice-menu-1 .menu-692 ul,
-#uws_main_navigation-container #nice-menu-1 .menu-692 ul li,
-#uws_main_navigation-container #nice-menu-1 .menu-693 ul,
-#uws_main_navigation-container #nice-menu-1 .menu-693 ul li,
-#uws_main_navigation-container #nice-menu-1 .menu-684 ul,
-#uws_main_navigation-container #nice-menu-1 .menu-684 ul li { width:160px; }
+#uws_main_navigation-container #nice-menu-1 .menu-491 ul,
+#uws_main_navigation-container #nice-menu-1 .menu-491 ul li,
+#uws_main_navigation-container #nice-menu-1 .menu-492 ul,
+#uws_main_navigation-container #nice-menu-1 .menu-492 ul li,
+#uws_main_navigation-container #nice-menu-1 .menu-493 ul,
+#uws_main_navigation-container #nice-menu-1 .menu-493 ul li,
+#uws_main_navigation-container #nice-menu-1 .menu-494 ul,
+#uws_main_navigation-container #nice-menu-1 .menu-494 ul li,
+#uws_main_navigation-container #nice-menu-1 .menu-495 ul,
+#uws_main_navigation-container #nice-menu-1 .menu-495 ul li { width:160px; }
 
-#uws_main_navigation-container #nice-menu-1 .menu-1362 ul,
-#uws_main_navigation-container #nice-menu-1 .menu-1362 ul li { width:155px; }
+#uws_main_navigation-container #nice-menu-1 .menu-496 ul,
+#uws_main_navigation-container #nice-menu-1 .menu-496 ul li { width:155px; }
     
 /********************************************/
 /* horsiontal lines between sub-menu items
@@ -203,32 +210,32 @@
 	padding: 6px 0 6px 10px;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-1529 ul li a {
+#uws_main_navigation-container #nice-menu-1 .menu-491 ul li a {
 	border-bottom: 1px solid #72D5DA;
 	border-top: 1px solid #019C99;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-683 ul li a {
+#uws_main_navigation-container #nice-menu-1 .menu-492 ul li a {
 	border-bottom: 1px solid #FBDCAC;
 	border-top: 1px solid #F7BF69;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-692 ul li a {
+#uws_main_navigation-container #nice-menu-1 .menu-493 ul li a {
 	border-bottom: 1px solid #B1E7AE;
 	border-top: 1px solid #629822;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-693 ul li a {
+#uws_main_navigation-container #nice-menu-1 .menu-494 ul li a {
 	border-bottom: 1px solid #EA768D;
 	border-top: 1px solid #C62C36;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-684 ul li a {
+#uws_main_navigation-container #nice-menu-1 .menu-495 ul li a {
 	border-bottom: 1px solid #8092D0;
 	border-top: 1px solid #302766;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-1362 ul li a {
+#uws_main_navigation-container #nice-menu-1 .menu-496 ul li a {
 	border-bottom: 1px solid #7CAEDC;
 	border-top: 1px solid #16437A;
 }
@@ -239,64 +246,65 @@
 #uws_main_navigation-container .nice-menu li a {
 	color: #FEFEFE;
 	display: block;
-	font-size: 22px;
+	font-size: 16px;
 	font-weight: normal;
 	padding: 11px 35px 11px; /* XXX */
 	text-decoration: none;
+	line-height: 2em;
 }
 
 #uws_main_navigation-container .nice-menu li a { font-family: 'HelveticaNeueLTCom-Lt'; }
 #uws_main_navigation-container .nice-menu li ul li a { font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
 
 /*******************************************/
-#uws_main_navigation-container #nice-menu-1 .menu-1529 {
+#uws_main_navigation-container #nice-menu-1 .menu-491 {
 	background: url("../images/uws-main-nav-resources-ico.png") no-repeat scroll 13px center transparent;
 	border-bottom: 5px solid #00BAB9;
 	width: 160px;
 	height: 48px;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-683 {
+#uws_main_navigation-container #nice-menu-1 .menu-492 {
 	background: url('../images/uws-main-nav-services-ico.png') no-repeat scroll 24px center transparent;
 	border-bottom: 5px solid #ff9a00;
 	width: 160px;
 	height: 48px;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-692 {
+#uws_main_navigation-container #nice-menu-1 .menu-493 {
 	background: url('../images/uws-main-nav-guides-ico.png') no-repeat scroll 27px center transparent;
 	border-bottom: 5px solid #8cbe4f;
 	width: 160px;
 	height: 48px;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-693 {
+#uws_main_navigation-container #nice-menu-1 .menu-494 {
 	background: url('../images/uws-main-nav-research-ico.png') no-repeat scroll 11px center transparent;
 	border-bottom: 5px solid #f02233;
 	width: 160px;
 	height: 48px;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-684 {
+#uws_main_navigation-container #nice-menu-1 .menu-495 {
 	background: url('../images/uws-main-nav-about-us-ico.png') no-repeat scroll 21px center transparent;
 	border-bottom: 5px solid #8e7fdf;
 	width: 160px;
 	height: 48px;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-1362{
+#uws_main_navigation-container #nice-menu-1 .menu-496{
 	background: url('../images/uws-main-nav-help-ico.png') no-repeat scroll 37px center transparent;
 	border-bottom: 5px solid #3185ea;
 	width: 155px;
 	height: 48px;
 }
 
-#uws_main_navigation-container #nice-menu-1 .menu-1529 > a { padding-left: 47px; }
-#uws_main_navigation-container #nice-menu-1 .menu-683 > a { padding-left: 58px }
-#uws_main_navigation-container #nice-menu-1 .menu-692 > a { padding-left: 64px; }
-#uws_main_navigation-container #nice-menu-1 .menu-693 > a { padding-left: 31px; }
-#uws_main_navigation-container #nice-menu-1 .menu-684 > a { padding-left: 52px; padding-right: 0; }
+#uws_main_navigation-container #nice-menu-1 .menu-491 > a { padding-left: 47px; }
+#uws_main_navigation-container #nice-menu-1 .menu-492 > a { padding-left: 58px }
+#uws_main_navigation-container #nice-menu-1 .menu-493 > a { padding-left: 64px; }
+#uws_main_navigation-container #nice-menu-1 .menu-494 > a { padding-left: 31px; }
+#uws_main_navigation-container #nice-menu-1 .menu-495 > a { padding-left: 52px; padding-right: 0; }
 
-#uws_main_navigation-container #nice-menu-1 .menu-1362 > a { padding-left: 66px; }
+#uws_main_navigation-container #nice-menu-1 .menu-496 > a { padding-left: 66px; }
 #uws_main_navigation-container #nice-menu-1 li { float:left; }
 #uws_main_navigation-container #nice-menu-1 .sf-sub-indicator { display:none; visibility:hidden; }
