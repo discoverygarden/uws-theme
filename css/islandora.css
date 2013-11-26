@@ -230,3 +230,10 @@ dl.solr-fields {
 #cboxLoadedContent, .uws-library-body-center-row-container {
   padding-bottom: 20px;
 }
+
+.page-user aside {
+	display: none;
+}
+.page-user .uws-library-body-center-row-container {
+	margin-left: 10px;
+}
