@@ -85,6 +85,10 @@
 	line-height: 1.3em;
 }
 
+img.featured-thumb {
+	float: left;
+}
+
 /* Islandora Searches */
 
 a.browse, a.adv-search {
