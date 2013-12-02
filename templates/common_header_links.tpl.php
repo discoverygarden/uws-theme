@@ -302,7 +302,7 @@
 						<div id="uws-library-header-external-search">
 								<span>
 									<a class="browse" href="islandora/object">Browse all</a>
-									<a class="adv-search" href="node/3">Advanced search</a>									
+									<a class="adv-search" href="adv-search">Advanced search</a>									
 								</span>
 							<div class="uws-library-external-search-container">
 								<?php print drupal_render(drupal_get_form('islandora_solr_simple_search_form')); ?>
