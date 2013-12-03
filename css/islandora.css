@@ -140,7 +140,7 @@ a.browse, a.adv-search {
 }
 
 .islandora-solr-display a.display-default, .islandora-solr-display a.display-grid, .islandora-solr-display a.display-table, .islandora-view-grid, .islandora-view-list {
-  background: url("/sites/all/themes/uws_library_AR/images/islandora/display-grid-list.png") no-repeat scroll left top transparent;
+  background: url("/sites/all/themes/uws-theme/images/islandora/display-grid-list.png") no-repeat scroll left top transparent;
   display: inline-block;
   height: 22px;
   outline: medium none;
@@ -149,7 +149,7 @@ a.browse, a.adv-search {
 }
 
 .islandora-solr-display a.display-grid, .islandora-view-grid {
-  background: url("/sites/all/themes/uws_library_AR/images/islandora/display-grid.png") no-repeat scroll left top transparent;
+  background: url("/sites/all/themes/uws-theme/images/islandora/display-grid.png") no-repeat scroll left top transparent;
 }
 
 dl.solr-thumb {
