@@ -103,9 +103,19 @@ a.browse, a.adv-search {
 
 .breadcrumb {
 	position: relative;
-	top: 1.5em;
 	font-size: 75%;
 	left: 10px;
+	display: inline-block;
+}
+.my_bookmarks_link {
+	float: right;
+	display: inline-block;
+	font-size: 75%;
+	position: relative;
+	right: 265px;
+}
+.breadcrumb a, .my_bookmarks_link a {
+	text-decoration: underline;
 }
 
 /*Solr search results pages */
