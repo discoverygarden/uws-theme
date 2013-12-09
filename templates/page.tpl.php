@@ -104,6 +104,7 @@
 			<div id="gm_wrapper_gm">
 				<div class="container_24" id="uws-library-body-center">
 					<?php print $breadcrumb; ?>
+					<span class="my_bookmarks_link"><a href="http://uwsprod.uws.dgicloud.com/islandora-bookmark" title="My bookmarks">My bookmarks</a></span>
 					<aside role="complementary">
 						<div class="uws-library-content-sidebar-left"><!-- UWS Sidebar Container -->
 							<div class="region-uws-sidebar-left">
