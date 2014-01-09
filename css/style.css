@@ -489,7 +489,7 @@ body { font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
 }
 
 .uws-library-external-search-container {
-	bottom: -4px;
+	bottom: 42px;
 	height: 82px;
 	position: absolute;
 	width: 465px;
