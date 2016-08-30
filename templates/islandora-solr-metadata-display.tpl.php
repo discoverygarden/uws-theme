@@ -15,7 +15,7 @@
  */
 ?>
 
-<?php if (count($solr_fields) > 1): ?>
+<?php if (count($solr_fields) > 0): ?>
   <fieldset <?php $print ? print 'class="islandora islandora-metadata"' : print 'class="islandora islandora-metadata collapsible collapsed"';?>>
     <legend><span class="fieldset-legend"><?php print t('Details'); ?></span></legend>
     <div class="fieldset-wrapper">
@@ -30,6 +30,14 @@
           </dd>
           <?php $row_field++; ?>
         <?php endforeach; ?>
+        <?php if (!empty($object_views_count_view)): ?>
+          <dt>
+            Object views
+          </dt>
+          <dd>
+            <?php print $object_views_count_view; ?>
+          </dd>
+        <?php endif; ?>
       </dl>
     </div>
   </fieldset>
