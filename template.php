@@ -210,3 +210,13 @@ function uws_library_AR_field__taxonomy_term_reference($variables) {
 
 	return($output);
 }
+
+/**
+ * Hook preprocess Solr metadata display variables to embed object views view.
+ *
+ * @param array $variables
+ *   Theme variables.
+ */
+function uws_library_AR_preprocess_islandora_solr_metadata_display(array &$variables) {
+  $variables['object_views_count_view'] = views_embed_view('object_views_count', 'object_views_count_block');
+}
