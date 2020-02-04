@@ -18,7 +18,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="robots" content="noindex, nofollow">
 
-		<meta name="msapplication-TileImage" content="/uws_library/sites/all/themes/uws_library_AR/images/ms_pinned_site/ms-pinned-site-144x144.png">
+		<meta name="msapplication-TileImage" content="http://library.uws.edu.au/main/sites/all/themes/uws_library_AR/images/ms_pinned_site/ms-pinned-site-144x144.png">
 		<meta name="msapplication-TileColor" content="#3871EB">
 		<meta name="application-name" content="UWS Library Website">
 

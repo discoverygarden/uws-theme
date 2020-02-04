@@ -1,6 +1,6 @@
 <?php
 
-function uws_library_AR_preprocess_html(&$variables) {
+function uws_library_ARB_preprocess_html(&$variables) {
 
 	# Add body classes if certain regions have content.
 
@@ -24,13 +24,13 @@ function uws_library_AR_preprocess_html(&$variables) {
 	return;
 }
 
-function uws_library_AR_process_html(&$variables) {
+function uws_library_ARB_process_html(&$variables) {
 
 	# Override or insert variables into the page template for HTML output.
 	return;
 }
 
-function uws_library_AR_process_page(&$variables) {
+function uws_library_ARB_process_page(&$variables) {
 
 	# Override or insert variables into the page template.
 
@@ -74,7 +74,7 @@ function uws_library_AR_process_page(&$variables) {
 	return;
 }
 
-function uws_library_AR_preprocess_maintenance_page(&$variables) {
+function uws_library_ARB_preprocess_maintenance_page(&$variables) {
 
 	# Implements hook_preprocess_maintenance_page().
 
@@ -88,12 +88,12 @@ function uws_library_AR_preprocess_maintenance_page(&$variables) {
 		$variables['site_name'] = '';
 	}
 
-	drupal_add_css(drupal_get_path('theme', 'uws_library_AR') . '/css/maintenance-page.css');
+	drupal_add_css(drupal_get_path('theme', 'uws_library_ARB') . '/css/maintenance-page.css');
 
 	return;
 }
 
-function uws_library_AR_process_maintenance_page(&$variables) {
+function uws_library_ARB_process_maintenance_page(&$variables) {
 
 	# Override or insert variables into the maintenance page template.
 
@@ -120,7 +120,7 @@ function uws_library_AR_process_maintenance_page(&$variables) {
 	return;
 }
 
-function uws_library_AR_preprocess_node(&$variables) {
+function uws_library_ARB_preprocess_node(&$variables) {
 
 	# Override or insert variables into the node template.
 
@@ -132,7 +132,7 @@ function uws_library_AR_preprocess_node(&$variables) {
 	return;
 }
 
-function uws_library_AR_preprocess_block(&$variables) {
+function uws_library_ARB_preprocess_block(&$variables) {
 
 	# Override or insert variables into the block template.
 
@@ -146,14 +146,14 @@ function uws_library_AR_preprocess_block(&$variables) {
 	return;
 }
 
-function uws_library_AR_menu_tree($variables) {
+function uws_library_ARB_menu_tree($variables) {
 
 	# Implements theme_menu_tree().
 
 	return('<ul class="menu clearfix">' . $variables['tree'] . '</ul>');
 }
 
-function uws_library_AR_menu_link(array $variables) {
+function uws_library_ARB_menu_link(array $variables) {
 
 	# Implements <nolink>
 
@@ -181,7 +181,7 @@ function uws_library_AR_menu_link(array $variables) {
 	return('<li' . $attributes . '>' . $output . $sub_menu . "</li>\n");
 }
 
-function uws_library_AR_field__taxonomy_term_reference($variables) {
+function uws_library_ARB_field__taxonomy_term_reference($variables) {
 
 	# Implements theme_field__field_type().
 
@@ -212,11 +212,48 @@ function uws_library_AR_field__taxonomy_term_reference($variables) {
 }
 
 /**
- * Hook preprocess Solr metadata display variables to embed object views view.
+ * Hook preprocess Solr metadata display variables to add object view and pdf download counts.
  *
  * @param array $variables
  *   Theme variables.
  */
-function uws_library_AR_preprocess_islandora_solr_metadata_display(array &$variables) {
-  $variables['object_views_count_view'] = views_embed_view('object_views_count', 'object_views_count_block');
+function themec_preprocess_islandora_solr_metadata_display(array &$variables) {
+  if (module_exists('islandora_usage_stats')) {
+    module_load_include('inc', 'islandora_usage_stats', 'includes/db');
+    $variables['object_views_count'] = islandora_usage_stats_get_individual_object_view_count($variables['islandora_object']->id);
+    if (in_array('islandora:sp_pdf', $variables['islandora_object']->models)) {
+      $dsid = 'OBJ';
+    }
+    else {
+      $dsid = 'PDF';
+    }
+    $ds_counts = islandora_usage_stats_get_datastream_downloads_count($variables['islandora_object']->id, $dsid);
+    if (isset($ds_counts[$dsid])) {
+	$variables['pdf_datastream_download_count'] = $ds_counts[$dsid];
+    }
+    else {
+	$variables['pdf_datastream_download_count'] = 0;
+    }	
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function themec_form_islandora_solr_simple_search_form_alter(&$form, &$form_state, $form_id) {
+  $form['simple']['islandora_simple_search_query']['#title'] = 'Search Publication';
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function themec_preprocess_page(&$variables) {
+  drupal_add_js(
+    array('themec' => array(
+      'research_data_text' => theme_get_setting('research_data_text'),
+      'research_data_redirect' => theme_get_setting('research_data_redirect'),
+      )
+    ),
+    array('type' => 'setting')
+  );
 }

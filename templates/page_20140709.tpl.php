@@ -2,6 +2,8 @@
 
 /**
  * @file
+ * UWS internal page template
+ *
  * UWS Library theme implementation to display a single Drupal page.
  *
  * The doctype, html, head and body tags are not in this template. Instead they
@@ -86,57 +88,90 @@
 
 		<?php include('common_header_links.tpl.php'); ?>
 
-   		 <!-- Just disabling navigation for now
-    	 <div id="navigation">
+		<div class="uws-slider-container"></div>
 
-	      <?php if ($main_menu): ?>
-	        <nav id="main-menu" role="navigation" tabindex="-1">
-	          <?php
-	          // This code snippet is hard to modify. We recommend turning off the
-	          // "Main menu" on your sub-theme's settings form, deleting this PHP
-	          // code block, and, instead, using the "Menu block" module.
-	          // @see https://drupal.org/project/menu_block
-	          print theme('links__system_main_menu', array(
-	            'links' => $main_menu,
-	            'attributes' => array(
-	              'class' => array('links', 'inline', 'clearfix'),
-	            ),
-	            'heading' => array(
-	              'text' => t('Main menu'),
-	              'level' => 'h2',
-	              'class' => array('element-invisible'),
-	            ),
-	          )); ?>
-	        </nav>
-	      <?php endif; ?>
+		<?php if ($page['featured']): ?>
+		<div id="featured">
+			<div class="section clearfix">
+				<?php print render($page['featured']); ?>
+			</div><!-- /.section -->
+		</div><!-- /#featured -->
+		<?php endif; ?>
 
-     	  <?php print render($page['navigation']); ?>
+		<!-- The content starts here -->
+		<div class="uws-library-content">
 
-    	 </div>   --> 
-    
-		<div id="main">
-		
-		    <div id="content" class="column" role="main">
-		      <?php print render($page['highlighted']); ?>
-		      <a id="main-content"></a>
-		      <?php print render($title_prefix); ?>
-		      <?php if ($title): ?>
-		        <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
-		      <?php endif; ?>
-		      <?php print render($title_suffix); ?>
-		      <?php print $messages; ?>
-		      <?php print render($tabs); ?>
-		      <?php print render($page['help']); ?>
-		      <?php if ($action_links): ?>
-		        <ul class="action-links"><?php print render($action_links); ?></ul>
-		      <?php endif; ?>
-		      <?php print render($page['content']); ?>
-                      <?php print render($page['featured_data']); ?>
-		      <?php print $feed_icons; ?>
-		    </div>
-		
+			<div id="gm_wrapper_gm">
+				<div class="container_24" id="uws-library-body-center">
+					<aside role="complementary">
+						<div class="uws-library-content-sidebar-left"><!-- UWS Sidebar Container -->
+							<div class="region-uws-sidebar-left">
+								<?php if ($page['sidebar_first']): ?>
+									<?php print render($page['sidebar_first']); ?>
+								<?php endif; ?>
+
+								<?php if ($page['sidebar_second']): ?>
+									<?php print render($page['sidebar_second']); ?>
+								<?php endif; ?>
+							</div>
+						</div><!-- END UWS Sidebar Container -->
+					</aside>
+
+					<div class="uws-library-body-center-row-container" id="main-content" role="main"><!-- Body Centre Row Container -->
+
+						<div class="breadcrumb"><!-- UWS Breadcrumbs -->
+							<?php print $breadcrumb; ?>
+						</div><!-- END UWS Breadcrumbs -->
+						<span class="my_bookmarks_link">
+							<a href="http://uwsprod.uws.dgicloud.com/islandora-bookmark" title="My bookmarks">My bookmarks</a>
+						</span>
+						<?php if ($messages): ?>
+						<div id="messages">
+							<div class="section clearfix">
+								<?php print $messages; ?>
+							</div><!-- /.section -->
+						</div><!-- /#messages -->
+						<?php endif; ?>
+
+						<div class="content"><!-- UWS Content Container -->
+							<?php if ($page['highlighted']): ?>
+							<div id="highlighted">
+								<?php print render($page['highlighted']); ?>
+							</div>
+							<?php endif; ?>
+							<?php print render($title_prefix); ?>
+							<?php if ($title): ?>
+							<h1 class="title" id="page-title">
+								<?php print $title; ?>
+							</h1>
+							<?php endif; ?>
+							<?php print render($title_suffix); ?>
+
+							<?php if ($tabs): ?>
+							<div class="tabs">
+								<?php print render($tabs); ?>
+							</div>
+							<?php endif; ?>
+							<?php print render($page['help']); ?>
+							<?php if ($action_links): ?>
+							<ul class="action-links">
+								<?php print render($action_links); ?>
+							</ul>
+							<?php endif; ?>
+							<?php print render($page['content']); ?>
+							<?php print $feed_icons; ?>
+						</div><!-- END UWS Content Container -->
+					</div><!-- END Body Centre Row Container -->
+
+					<!-- 
+					<aside> contents removed from here 
+					-->
+
+				</div>
+			</div>
 		</div>
-		
+		<!-- The content finishes here -->
+
 		<?php include('common_footer_links.tpl.php'); ?>
 
 	</div><!-- /#page -->

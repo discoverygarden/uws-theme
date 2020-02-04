@@ -1,11 +1,15 @@
 	<header role="banner">
-		<div class="uws-quick-links"><!-- Start Quick Links -->
+		<!-- Start Quick Links
+		<div class="uws-quick-links">
 			<div class="container_24">
 				<div class="grid_24" id="uws-quick-links-relative">
 					<div id="uws-quick-links-grp-container">
 						<div class="grid_4 alpha">
 							<span class="h4">Governance</span>
  							<ul class="ul__reset">
+								<li>
+									<a id="header-quickLinks-first" href="http://library.westernsydney.edu.au">Library Home</a>
+								</li>								
 								<li>
 									<a id="header-quickLinks-first" href="http://www.uws.edu.au/about_uws/uws/vice-chancellors_welcome">
 										VC&#39;s Welcome
@@ -30,12 +34,15 @@
 									<a href="http://www.uws.edu.au/sustainability/sustainability">
 										Sustainability
 									</a>
-								</li>
+								</li>							
 							</ul>
 						</div>
 						<div class="grid_4">
 							<span class="h4">People</span>
 							<ul class="ul__reset">
+								<li>
+									<a href="https://researchdirect-submit.uws.edu.au/cgi-bin/UWS_valet/submit.cgi">Submit Your Research</a>
+								</li>								
 								<li>
 									<a href="http://pubapps.uws.edu.au/teldir/">
 										Staff Directory
@@ -60,12 +67,15 @@
 									<a href="http://www.uws.edu.au/people_and_culture/opc">
 										Office of People and Culture
 									</a>
-								</li>
+								</li>							
 							</ul>
 						</div>
 						<div class="grid_4">
 							<span class="h4">Students</span>
 							<ul class="ul__reset">
+								<li>
+									<a href="/user">Admin Login</a>
+								</li>								
 								<li>
 									<a href="http://myuws.uws.edu.au/">
 										MyUWS Login
@@ -90,12 +100,16 @@
 									<a href="http://www.uws.edu.au/community/engagement/careers_and_cooperative_education">
 										Jobs for Students
 									</a>
-								</li>
+								</li>							
 							</ul>
 						</div>
 						<div class="grid_4">
 							<span class="h4">Study</span>
 							<ul class="ul__reset">
+								<li>
+									<a href="http://library.uws.edu.au/main/contactus">Help</a>
+								</li>
+								
 								<li>
 									<a href="http://www.uws.edu.au/future_students">
 										Future Students
@@ -120,7 +134,7 @@
 									<a href="http://platformweb.uws.edu.au/pweb_tt/start.asp">
 										Timetable
 									</a>
-								</li>
+								</li>								
 							</ul>
 						</div>
 
@@ -188,117 +202,50 @@
 					</div>
 					<div class="uws-quickLinks-toggle">
  						<div id="uws-quickLinks-toggle-form-container">
-                    	    <a id="uws-quickLinks-toggle-trigger" class="uws-quickLinks-toggle-trigger-inactive" tabindex="2">
-                    	    	QuickLinks
-                    	    </a>
+			                    	    <a id="uws-quickLinks-toggle-trigger" class="uws-quickLinks-toggle-trigger-inactive" tabindex="2">QuickLinks</a>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div><!-- End Quick Links -->
+		</div>
+		End Quick Links -->
 
 		<div class="uws-library-header"><!-- Start Header Links -->
+
+
 			<!-- UWS Header Background Split Trick -->
 			<div class="uws-library-header-right-black"></div>
- 			<div class="uws-library-header-left-grey"></div>
 
 			<div class="container_24" id="uws-library-header-center">
+				<!-- #uws-top-header-bg part removed from here -->
 
-				<div class="grid_24" id="uws-top-header-bg">
-
-					<div id="uws-library-header-top-menu"><!-- UWS Top Header Menu -->
-						<ul>
-							<li>
-								<a id="header-top-menu-first" title="UWS Home" href="http://www.uws.edu.au/">
-									UWS Home
-								</a>
-							</li>
-							<li>
-								<a title="vUWS" href="https://vuws.uws.edu.au/">
-									vUWS
-								</a>
-							</li>
-							<li>
-								<a title="MyMail" href="https://myuws.uws.edu.au/">
-									MyMail
-								</a>
-							</li>
-							<li>
-								<a title="Academic Skills" href="http://www.uws.edu.au/currentstudents/current_students/getting_help/study_and_life_skills_workshops">
-									Academic Skills
-								</a>
-							</li>
- 							<li>
- 								<a title="Staff Directory" href="http://pubapps.uws.edu.au/teldir/">
- 									Staff Directory
- 								</a>
- 							</li>
-							<li>
-								<a title="iPay" href="https://ipay.uws.edu.au/">
-									iPay
-								</a>
-							</li>
-							<li>
-								<a title="My Library" href="http://handle.uws.edu.au:8081/1959.7/primo_login">
-									My Library
-								</a>
-							</li>
-							<li>
-								<a title="Air UWS-Lite" href="http://www.uws.edu.au/information_technology_services/its/airuws_lite">
-									Air UWS-Lite
-								</a>
-							</li>
-							<li>
-								<?php if (user_is_logged_in()): ?>
-								<a title="Logout of UWS Library Islandora" href="<?php global $base_url; print $base_url; ?>/user/logout">
-									Logout
-								</a>
-								<?php else: ?>
-								<a title="Login to UWS Library Islanodra" href="<?php global $base_url; print $base_url; ?>/user">
-									Login
-								</a>
-								<?php endif; ?>
-							</li>
-						</ul>
-					</div><!-- END UWS Top Header Menu -->
-
-					<div id="uws-library-header-social-media"><!-- UWS Top Header Social Bookmarks -->
-						<span id="uws-join-us-label">Join UWS On:</span>
-						<ul id="uws-library-header-social-media-list">
-							<li>
-								<a href="http://www.uws.edu.au/youtube">
-									<img alt="Social YouTube" src="<?php global $base_path; print $base_path.path_to_theme(); ?>/images/uws-social-youtube.png">
-								</a>
-							</li>
-							<li>
-								<a href="https://twitter.com/UWS_web/uwsall">
-									<img alt="Social Twitter" src="<?php global $base_path; print $base_path.path_to_theme(); ?>/images/uws-social-twitter.png">
-								</a>
-							</li>
-							<li>
-								<a href="http://www.uws.edu.au/facebook">
-									<img alt="Social Facebook" src="<?php global $base_path; print $base_path.path_to_theme(); ?>/images/uws-social-facebook.png">
-								</a>
-							</li>
-						</ul>
-					</div><!-- END UWS Top Header Social Bookmarks -->
-					<div class="uws-research-login">
-						<a class"uws-research-login-link" href="/user">Staff login</a>
-					</div>	
+				<div id="uws-library-header-r1-links">
+					<ul>
+						<li><a href="http://library.westernsydney.edu.au" title="Library Home">Library Home</a></li>
+						<li><a href="https://researchdirect-submit.westernsydney.edu.au/cgi-bin/UWS_valet/submit.cgi" title="Research Self-Submission">Submit Your Research</a></li>
+						<li><a href="/user" title="Admin Login">Admin Login</a></li>
+                                                <?php if (!user_is_anonymous()): ?>
+                                                  <li><a href="/user/logout" title="Logout">Logout</a></li>
+                                                <?php endif; ?>
+						<li><a href="http://library.westernsydney.edu.au/main/help/contact-us" title="Library Contact Us">Help</a></li>
+					</ul>
 				</div>
 
 				<div id="uws-search-logo-container"><!-- UWS Search Logo Container -->
 					<div class="grid_12"><!-- UWS Logo Container -->
-						<?php if ($logo): ?>
+						<?php if ($logo): ?><br/><br/>
 						<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-							<img src="<?php global $base_path; print $base_path.path_to_theme(); ?>/images/uws-library-logo.png" alt="<?php print t('Home'); ?>">
-						</a>
+							<img src="<?php global $base_path; print $base_path.path_to_theme(); ?>/images/WSU_research_logo_new_2.jpg"  height= "45" alt="<?php print t('Home'); ?>" ></a>
+              
+						
 						<?php endif; ?>
 					</div><!-- END UWS Logo Container -->
 
 					<!--  UWS Search Bar -->
 
 					<div class="grid_12"><!-- UWS Search Container -->
+
+
 						<div id="uws-library-header-external-search">
 							<div class="uws-library-external-search-container">
 								<?php include('uws_find_bja_search_block.tpl.php'); ?>
@@ -307,13 +254,13 @@
 					</div><!-- END UWS Search Container -->
 				</div><!-- UWS Search Logo Container -->
 
-				<div class="grid_24 alpha omega" id="uws_main_navigation-wrapper"><!-- UWS Main Menu Wrapper -->
-					<div id="uws_main_navigation-container" role="navigation"><!-- UWS Main Menu -->
-						<?php if ($page['horizontal_menu']): ?>
+				<!--<div class="grid_24 alpha omega" id="uws_main_navigation-wrapper">--><!-- UWS Main Menu Wrapper -->
+					<!--<div id="uws_main_navigation-container" role="navigation">--><!-- UWS Main Menu -->
+						<!--<?php if ($page['horizontal_menu']): ?>
 							<?php print render($page['horizontal_menu']);?>
-						<?php endif; ?>
-					</div><!-- END UWS Main Menu -->
-				</div><!-- END UWS Main Menu Wrapper-->
+						<?php endif; ?>-->
+					<!--</div>--><!-- END UWS Main Menu -->
+				<!--</div>--><!-- END UWS Main Menu Wrapper-->
 			</div>
 		</div><!-- End Header Links -->
 	</header>

@@ -23,7 +23,7 @@ jQuery(document).ready(function($){
 		
 		if (uwsQuickLinksToggle === true) {
 			$('.uws-quick-links').animate(
-				{ top : '-155px'},
+				{ top : '-15px'},
 				500
 			);
 			$('#uws-quickLinks-toggle-trigger').removeClass('uws-quickLinks-toggle-trigger-active');
