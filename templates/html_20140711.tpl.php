@@ -46,9 +46,9 @@
 	<head <?php if ($rdf_namespaces) { print 'profile="' . $grddl_profile . '"';} ?>>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- Force IE out of compatibility mode -->
 
-		<meta name="msapplication-TileImage" content="http://library.uws.edu.au/main/sites/all/themes/uws_library_AR/images/ms_pinned_site/ms-pinned-site-144x144.png">
+		<meta name="msapplication-TileImage" content="/uws_library/sites/all/themes/uws_library_AR/images/ms_pinned_site/ms-pinned-site-144x144.png">
 		<meta name="msapplication-TileColor" content="#3871EB">
-		<meta name="application-name" content="UWS Research Direct Website">
+		<meta name="application-name" content="UWS Library Website">
 		<?php print $head; ?>
 		<title><?php print $head_title; ?></title>
 

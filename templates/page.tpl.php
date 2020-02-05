@@ -103,8 +103,6 @@
 
 			<div id="gm_wrapper_gm">
 				<div class="container_24" id="uws-library-body-center">
-					<?php print $breadcrumb; ?>
-					<span class="my_bookmarks_link"><a href="http://uwsprod.uws.dgicloud.com/islandora-bookmark" title="My bookmarks">My bookmarks</a></span>
 					<aside role="complementary">
 						<div class="uws-library-content-sidebar-left"><!-- UWS Sidebar Container -->
 							<div class="region-uws-sidebar-left">
@@ -120,12 +118,450 @@
 					</aside>
 
 					<div class="uws-library-body-center-row-container" id="main-content" role="main"><!-- Body Centre Row Container -->
-						<?php if ($page['breadcrumb']): ?>
-						<div class="breadcrumb"><!-- UWS Breadcrumbs -->
-							<?php print render($page['breadcrumb']); ?>
-						</div><!-- END UWS Breadcrumbs -->
-						<?php endif; ?>
 
+						<div class="breadcrumb"><!-- UWS Breadcrumbs -->
+							<?php
+              //Code to fix breadcrumbs for 2 main collections and root of Islandora (shows search results rather than folder view)
+              if($totalCol = strpos($breadcrumb,"Islandora Repository"))
+              {
+                 //This  goes to HOME $breadcrumb = substr($breadcrumb,0,$totalCol-11).substr($breadcrumb,$totalCol-2);
+                 $breadcrumb = substr($breadcrumb,0,$totalCol-2)."/search/?type=dismax".substr($breadcrumb,$totalCol-2);
+              }
+              if($research = strpos($breadcrumb,"researchCollection"))
+              {
+                 if($object = strpos($breadcrumb,"object"))
+                 {
+                    $breadcrumb_alt = substr($breadcrumb,0,$object)."search".substr($breadcrumb,$object+6,25)."?type=dismax".substr($breadcrumb,$object+31);
+                    print $breadcrumb_alt;
+                 }
+              }
+              else if($thesis = strpos($breadcrumb,"thesisCollection"))
+              {
+                 if($object = strpos($breadcrumb,"object"))
+                 {
+                    $breadcrumb_alt = substr($breadcrumb,0,$object)."search".substr($breadcrumb,$object+6,23)."?type=dismax".substr($breadcrumb,$object+29);
+                    print $breadcrumb_alt;
+                 }
+              }
+              else if($school = strpos($breadcrumb,">404"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school)."> The Whitlam Institute".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }                   
+              else if($school = strpos($breadcrumb,">409"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">School of Education".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }                        
+              else if($school = strpos($breadcrumb,">414"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">School of Communication Arts".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }
+              else if($school = strpos($breadcrumb,">416"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Strategy and Quality".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }                         
+              else if($school = strpos($breadcrumb,">417"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">School of Medicine".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }
+              else if($school = strpos($breadcrumb,">418"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Library".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }  
+              else if($school = strpos($breadcrumb,">419"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">School of Humanities and Languages".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }             
+              else if($school = strpos($breadcrumb,">420"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">School of Natural Sciences".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }             
+              else if($school = strpos($breadcrumb,">424"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">School of Computing and Mathematics".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">425"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Deans Unit - Health and Science".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }                  
+              else if($school = strpos($breadcrumb,">426"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Deans Unit - Arts".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }            
+              else if($school = strpos($breadcrumb,">427"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Deans Unit - Business".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }               
+              else if($school = strpos($breadcrumb,">428"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">School of Social Sciences".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }            
+              else if($school = strpos($breadcrumb,">429"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">School of Marketing".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }            
+              else if($school = strpos($breadcrumb,">430"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Sydney Graduate School of Management".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }          
+              else if($school = strpos($breadcrumb,">432"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">School of Biomedical and Health Sciences".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }             
+              else if($school = strpos($breadcrumb,">433"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">School of Engineering".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }            
+              else if($school = strpos($breadcrumb,">434"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">School of Nursing and Midwifery".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              } 
+              else if($school = strpos($breadcrumb,">435"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">School of Economics and Finance".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }                            
+              else if($school = strpos($breadcrumb,">436"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">School of Psychology".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }                           
+              else if($school = strpos($breadcrumb,">437"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">MARCS Auditory Laboratories".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }               
+              else if($school = strpos($breadcrumb,">438"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Centre for Cultural Research".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }            
+              else if($school = strpos($breadcrumb,">440"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Social Justice, Social Change".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }             
+              else if($school = strpos($breadcrumb,">441"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">School of Accounting".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">442"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">School of Law".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }             
+              else if($school = strpos($breadcrumb,">443"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">School of Management".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }            
+              else if($school = strpos($breadcrumb,">445"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">National Institute of Complementary Medicine".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }            
+              else if($school = strpos($breadcrumb,">446"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Office of Pro-Vice Chancellor (Research)".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">447"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Capital Works and Facilities".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">450"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Nanoscale Organisation and Dynamics Research Group".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              } 
+              else if($school = strpos($breadcrumb,">451"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Family and Community Health".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }                        
+              else if($school = strpos($breadcrumb,">452"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Writing and Society Research Centre".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }                     
+              else if($school = strpos($breadcrumb,">453"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Urban Research Centre".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">456"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Industry and Innovation Studies".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">457"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">CRC Irrigation Futures".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">458"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Centre for Educational Research".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">459"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Office of Pro Vice-Chancellor (Learning and Teaching)".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">464"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Division of Corporate Strategy and Services".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">465"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Student Support Services".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">467"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Badanami Indigenous Education".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }            
+              else if($school = strpos($breadcrumb,">468"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Chief Financial Officer".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }            
+              else if($school = strpos($breadcrumb,">490"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Centre for Citizenship and Public Policy".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">512"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Religion and Society Research Centre".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }
+              else if($school = strpos($breadcrumb,">513"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Interpreting and Translation".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }                         
+              else if($school = strpos($breadcrumb,">514"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Justice Research".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }             
+              else if($school = strpos($breadcrumb,">515"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Sustainability and Social Research Group".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }            
+              else if($school = strpos($breadcrumb,">516"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Centre for Civionics - Infrastructure Engineering".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">517"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Disaster Response and Resilience".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }             
+              else if($school = strpos($breadcrumb,">518"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Centre for Health Research".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">519"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Solar Energy Technologies".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">532"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Molecular Medicine Research Group".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">534"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Office of Deputy Vice Chancellor (Academic and Research)".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">535"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Human Resources".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }            
+              else if($school = strpos($breadcrumb,">536"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Organisational Development Unit".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }            
+              else if($school = strpos($breadcrumb,">537"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Corporate Stategy and Services".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }            
+              else if($school = strpos($breadcrumb,">538"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Registrars Office".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">539"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Campus Development Unit".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }            
+              else if($school = strpos($breadcrumb,">540"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Student Accomodation".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }             
+              else if($school = strpos($breadcrumb,">541"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Office of DVC Academic and Enterprise".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }            
+              else if($school = strpos($breadcrumb,">542"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">UWS International".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }            
+              else if($school = strpos($breadcrumb,">543"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">UWS Innovation and Consulting".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }             
+              else if($school = strpos($breadcrumb,">544"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Information Technology Services".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }            
+              else if($school = strpos($breadcrumb,">545"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Office of Engagement and Partnerships".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }            
+              else if($school = strpos($breadcrumb,">546"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Hawkesbury Institute for the Environment".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }            
+              else if($school = strpos($breadcrumb,">567"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Institute for Culture and Society".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">568"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">The MARCS Institute".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">569"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Centre for Infrastructure Engineering".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">571"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">School of Business".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">572"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">School of Computing, Engineering and Mathematics".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">573"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">School of Humanities and Communication Arts".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">574"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">School of Science and Health".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">575"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">School of Social Sciences and Psychology".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">589"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Artificial Intelligence Research Group".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">591"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Community Economics".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">592"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Office of Pro-Vice Chancellor (Education)".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">593"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Office of Pro-Vice Chancellor (Engagement and International)".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">594"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Office of Pro Vice-Chancellor (Students)".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">595"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Marketing and Communication".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">596"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Human Resources".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }           
+              else if($school = strpos($breadcrumb,">597"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Centre for Research in Mathematics".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }          
+              else if($school = strpos($breadcrumb,">598"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Digital Humanities Research Group".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }  
+              else if($school = strpos($breadcrumb,">602"))
+              {
+                 $breadcrumb_alt = substr($breadcrumb,0,$school).">Australia-China Institute for Arts and Culture".substr($breadcrumb,$school+4,2500);
+                 print $breadcrumb_alt;
+              }          
+              else
+              { 
+                 print $breadcrumb;
+              } 
+              ?>
+						</div><!-- END UWS Breadcrumbs -->
+						<span class="my_bookmarks_link">
+							<a href="http://researchdirect.uws.edu.au/islandora-bookmark" title="My bookmarks">My bookmarks</a>
+						</span>
 						<?php if ($messages): ?>
 						<div id="messages">
 							<div class="section clearfix">
@@ -135,9 +571,6 @@
 						<?php endif; ?>
 
 						<div class="content"><!-- UWS Content Container -->
-							<div id="uws-print-logo">
-								<img src="<?php global $base_path; print $base_path . path_to_theme(); ?>/images/uws-library-logo.png" alt="UWS Print Logo">
-							</div>
 							<?php if ($page['highlighted']): ?>
 							<div id="highlighted">
 								<?php print render($page['highlighted']); ?>
@@ -149,7 +582,10 @@
 								<?php print $title; ?>
 							</h1>
 							<?php endif; ?>
-							<?php print render($title_suffix); ?>
+							<?php
+              
+               print render($title_suffix); 
+               ?> 
 
 							<?php if ($tabs): ?>
 							<div class="tabs">
@@ -167,49 +603,10 @@
 						</div><!-- END UWS Content Container -->
 					</div><!-- END Body Centre Row Container -->
 
-					<aside role="complementary">
-						<div class="uws-library-content-sidebar-right"><!-- Content Sidebar Right -->
-							<div class="uws-library-block-container-gm"><!-- UWS Online Library Chat Module -->
-								<div class="region-uws-online-librarian-chat">
-									<?php if ($page['online_librarian']): ?>
-										<?php print render($page['online_librarian']);?>
-									<?php endif; ?>
-								</div>
-							</div><!-- END UWS Online Library Chat Module -->
+					<!-- 
+					<aside> contents removed from here 
+					-->
 
- 							<div class="uws-library-block-container-gm"><!-- UWS Campus Location Module -->
-								<div class="region-uws-campus-location">
-									<?php if ($page['locations']): ?>
-										<?php print render($page['locations']); ?>
-									<?php endif; ?>
-								</div>
-							</div><!-- END UWS Campus Location Module -->
-
-							<div class="uws-library-block-container-gm"><!-- UWS Library Opening Hours Module -->
-								<div class="region-uws-library-opening-hours">
-									<?php if ($page['opening_hours']): ?>
-										<?php print render($page['opening_hours']); ?>
-									<?php endif; ?>
-								</div>
-							</div><!-- END UWS Library Opening Hours Module -->
-
-							<div class="uws-library-block-container-gm"><!-- UWS News Module -->
-								<div class="region-uws-news">
-									<?php if ($page['news']): ?>
-										<?php print render($page['news']); ?>
-									<?php endif; ?>
-								</div>
-							</div><!-- END UWS News Module -->
-
-							<?php if ($page['search_form']): ?>
-							<div class="uws-library-block-container-gm"><!-- UWS Library Search Form -->
-								<div class="region-uws-library-search-form">
-										<?php print render($page['search_form']); ?>
-								</div>
-							</div><!-- END UWS Library Search Form -->
-							<?php endif; ?>
-						</div><!-- END Content Sidebar Right -->
-					</aside>
 				</div>
 			</div>
 		</div>

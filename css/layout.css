@@ -149,11 +149,11 @@ ul.menu li { margin: 0; }
 
 .region-content ul,
 .region-content ol {
- 	margin: 1em 0;
-	padding: 0 0 0.25em 2.5em;
+ 	/*margin: 1em 0;
+	padding: 0 0 0.25em 2.5em;*/
 }
 
-.item-list ul li { margin: 0; padding: 0.2em 0.5em 0 0; }
+.item-list ul li { margin: 0; padding: 0 0.5em 0 0; /*padding: 0.2em 0.5em 0 0;*/ }
 
 ul.tips { padding: 0 0 0 1.25em; }
 
@@ -216,7 +216,8 @@ table ul.links li { padding: 0 1em 0 0; }
 /* --------------- System Tabs  --------------- */
 .tabs {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	margin-bottom: 20px;
+	/*margin-bottom: 20px;*/
+	margin-bottom: 10px;
 }
 
 .tabs ul.primary {
@@ -289,14 +290,14 @@ ul.action-links li a {
 }
 
 /* ---------------- Buttons ---------------- */
-input.form-submit,
+/*input.form-submit,
 a.button {
-	background: #fff url(../images/buttons.png) 0 0 repeat-x;
+	background: #fff url(../images/buttons_red.png) 0 0 repeat-x;
 	border: 1px solid #e4e4e4;
 	border-bottom: 1px solid #b4b4b4;
 	border-left-color: #d2d2d2;
 	border-right-color: #d2d2d2;
-	color: #3a3a3a;
+	color: #ffffff;
 	cursor: pointer;
 	font-size: 0.929em;
 	font-weight: normal;
@@ -309,6 +310,28 @@ a.button {
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 }
+*/
+
+#edit-submit {
+  margin-top: 0px;
+  position: absolute;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+input.form-submit,
+a.button {
+  background: url("../images/arrow-white.png") #ff0033 right;
+  border-radius: 0;
+  border: none;
+  background-repeat: no-repeat;
+  background-size: 17px;
+  color: #ffffff;
+ padding: 5px 28px 5px 10px;
+   /*height: auto;
+  position: absolute;
+  top: 35px;
+  right: 25px; */}
 
 a.button:link,
 a.button:visited,
@@ -316,7 +339,7 @@ a.button:hover,
 a.button:focus,
 a.button:active {
 	text-decoration: none;
-	color: #5a5a5a;
+	color: #ffffff;
 }
 
 /* -------------- Form Elements ------------- */
@@ -419,8 +442,8 @@ input.form-text,
 textarea.form-textarea,
 select.form-select { border: 1px solid #ccc; }
 
-input.form-submit:hover,
-input.form-submit:focus { background: #dedede; }
+/*input.form-submit:hover,
+input.form-submit:focus { background: #ff0033; }  */
 
 .password-suggestions ul li {
 	margin-left: 1.2em;
@@ -920,7 +943,13 @@ h1#site-name { margin: 0; }
 /* ----------------- Content ------------------ */
 /*.content { margin-top: 10px; }*/
 
-h1#page-title { font-size: 2em; line-height: 1; margin-bottom: 1em; }
+h1#page-title { font-size: 2em; /*line-height: 2; margin-bottom: 1em;*/ }    
+
+
+span.uwsdora-mods-title-alternative {
+                font-size: 10pt;
+                padding: 0.5em;
+}
 
 #content h2 {
 	margin-bottom: 2px;
@@ -1057,7 +1086,7 @@ ul.links { color: #68696b; font-size: 0.821em; }
 }
 
 /* -------------- Breadcrumbs -------------- */
-.breadcrumb { font-size: 0.929em; }
+.breadcrumb { /*font-size: 0.929em;*/ }
 
 #breadcrumb {
 	/* margin: 0 15px; */

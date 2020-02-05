@@ -1,25 +1,63 @@
 /* Frontpage and Views */
 
-.submit-collection, .submit-collection-anon, .questions-block, #block-islandora-solr-simple {
-  background: #00BAB9;
+.submit-collection, .submit-collection-anon, .questions-block, #block-islandora-solr-simple, .manage-data, .submit-data-research {
+  /*background: #00BAB9;*/
+  background: #663399;
   float: right;
-  font-size: 130%;
+  /*font-size: 130%;*/
   font-weight: normal;
-  height: 80px;
-  width: 60%;
-  max-width: 360px;  
+  /*height: 80px;
+  width: 60%;*/
+  width: 25%;
+  /*max-width: 360px;  */
   line-height: 3.2em;
   margin-bottom: 0;
+  margin-top: 5px;
 }
-.submit-collection a, .submit-collection-anon a {
+
+.submit-publication {
+	margin-bottom: 1.5rem;
+}
+
+.submit-data-research {
+	background-color: #006699 !important;
+}
+
+.submit-collection a, .submit-collection-anon a, .manage-data a, .submit-data-research a{
   color: #FFFFFF;
-  margin-left: 3.2em;
   display: block;
-  margin-top: 0.35em;
+  text-align: center;
 }
-.submit-collection a:hover, .submit-collection-anon a:hover {
-	color: #444
+
+.manage-data {
+  background: #ed0033;
 }
+
+.submit-data-anon {
+  /*background: #00BAB9;*/
+  background: #990033;
+  float: right;
+  /*font-size: 130%;*/
+  font-weight: normal;
+  /*height: 80px;
+  width: 60%;*/
+  width: 25%;
+  /*max-width: 360px;  */
+  line-height: 3.2em;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+.submit-data-anon a {
+  color: #FFFFFF;
+  display: block;
+  /* display: none; */
+  /*margin-left: 3.2em;*/
+  margin-left: 30px;  
+  /*margin-top: 0.35em;*/
+}
+/*.submit-collection a:hover, .submit-collection-anon a:hover {
+	color: #444;
+}*/
 
 #block-islandora-solr-simple  {
 	background: #fff;
@@ -36,10 +74,7 @@
 }
 
 .not-front #edit-islandora-simple-search-query {
-	width: 80%;
-}
-#block-block-4 {
-	margin: 1em 0;
+	width: 70%;
 }
 
 .browse-links {
@@ -84,12 +119,32 @@
 	float: left;
 }
 
+/* Styles added for Featured Data Block - Front Page, Amir: 01/12/2016 */
+.region-featured-data {
+    float: left;
+    display: block;
+    margin-bottom: 3.3em;
+    border-top: 1px solid #D3D7D9;
+    padding-top: 2em;
+    clear: both;
+    width: 100%;
+    padding-left: 35px;
+    padding-right: 30px;
+    line-height: 1.3;
+}
+
+
 #block-views-featured-collections-block {
 	float: left;
 	display: block;
 	margin-bottom: 3.3em;
 	border-top: 1px solid #D3D7D9;
 	padding-top: 2em;
+	clear: both;
+	width: 100%;
+	padding-left: 35px;
+	padding-right: 30px;
+	line-height: 1.3;
 }
 #block-views-featured-collections-block .views-row {
 	max-width: 45%;
@@ -113,14 +168,17 @@
 
 img.featured-thumb {
 	float: left;
+	padding: 10px 10px 0 0;
 }
 
 /* Islandora Searches */
 
 a.browse, a.adv-search {
-	text-decoration: underline;
-	margin-right: 0.5em;
+	color: black;
 	font-size: 80%;
+	font-weight: bold;
+	margin-right: 0.5em;
+	text-decoration: underline;
 }
 
 #edit-islandora-simple-search-query--2 {
@@ -129,30 +187,30 @@ a.browse, a.adv-search {
 
 .breadcrumb {
 	position: relative;
-	font-size: 75%;
+	/*font-size: 75%;*/
 	left: 10px;
 	display: inline-block;
 }
 .my_bookmarks_link {
 	float: right;
-	display: inline-block;
+	/*display: inline-block;*/
+	display: none;
 	font-size: 75%;
 	position: relative;
-	right: 265px;
+	//right: 265px;
 }
 .breadcrumb a, .my_bookmarks_link a {
-	text-decoration: underline;
+	/*text-decoration: underline;*/
 }
 
 /*Solr search results pages */
 
 #edit-islandora-simple-search-query {
-	width:74%;
+	width:70%;
 }
 
 .islandora-basic-collection-wrapper {
 	position: relative;
-	top: -33px;
 }
 
 
@@ -164,7 +222,8 @@ a.browse, a.adv-search {
   float: right;
   opacity: 0.5;
   position: relative;
-  top: -2px;
+  /*top: -2px;*/
+  top: -8px;
 }
 #block-islandora-solr-display-switch ul li {
   float: left;
@@ -209,7 +268,7 @@ dl.solr-fields {
 /* Facets and Sorts */
 
 .uws-library-content-sidebar-left a:link, .uws-library-content-sidebar-left a:visited {
-	color: #0071B3;
+	/*color: #0071B3;*/
 }
 .uws-library-content-sidebar-left a:hover, .uws-library-content-sidebar-left a:active {
 	color: #018FE2;
@@ -218,6 +277,21 @@ dl.solr-fields {
 .block-islandora-solr h3 {
 	font-size: 120%;
 }
+
+/* This fixes the "Sort By" facet block appearance */
+
+#block-islandora-solr-sort h2 {
+    display: block !important;
+    background-color: #dddddd;
+    font-weight: bold;
+    padding: 5px 8px;
+    font-size: 120%;
+}
+
+.islandora-solr-sort li {
+    padding-left: 1em !important;
+}
+
 
 
 /* UWS Theme over rides */
@@ -239,37 +313,40 @@ dl.solr-fields {
 }
 .front .node-teaser h2 {
 	padding-top: 0;
-	margin-top: -10px;
+	/*margin-top: -10px;*/
 }
 
 .uws-research-login {
-	float: right;
-	font-size: 80%;
-	margin-top: 1.35em;
 	cursor: pointer;
+	float: right;
+	margin-top: 1.35em;
+	font-size: 80%;
 }
 
 .uws-library-content-sidebar-left ul {
-	list-style: circle;
+	/*list-style: circle;*/
 }
 
 #uws-library-header-external-search {
-  height: 111px;
-  padding-left: 20px;
-  padding-top: 80px;
+  /*height: 150px;*/
+  margin-top: 45px;
+  padding-left: 25px;
+  padding-top: 0px;
   position: relative;
 }
 
 .uws-library-content-sidebar-left {
-	margin: 15px 10px 0 10px;
+	/*margin: 130px 10px 0px 10px;*/
+	margin: 0px 10px;
 }
 
 #cboxLoadedContent h1.title, .uws-library-body-center-row-container h1.title {
   font-size: 20px !important;
+	padding-left: 20px;
 }
 
 #cboxLoadedContent, .uws-library-body-center-row-container {
-  padding-bottom: 20px;
+  //padding-bottom: 20px;
 }
 
 .page-user aside {
@@ -278,3 +355,80 @@ dl.solr-fields {
 .page-user .uws-library-body-center-row-container {
 	margin-left: 10px;
 }
+
+.islandora-solr-facet-wrapper > h3 {
+	background-color: #dddddd;
+	/*background-color: #7EB7E1;*/
+	/*line-height: 13px;*/
+	font-weight: bold;
+	padding: 5px 8px;
+}
+.count {
+	float: right;
+}
+#uws-library-header-center {
+	height: 112px;
+}
+#block-system-main {
+	padding-left: 2em;
+}
+.soft-limit {
+	padding-left: 125px;
+}
+
+/* for disabling Plus_Minus signs */
+.plusminus
+{
+  float: right;
+  display: none;
+}
+
+/*Disable CSV Export option in Search Results*/
+.item-list ul#secondary-display-profiles li.first
+{
+  /*display: none;*/
+  visibility: hidden;
+}
+
+/*
+ * This rule overrides the 'modules/islandora/css/islandora.base.css' style to control the search results' row line-height.
+ */
+.islandora-inline-metadata dt,
+.islandora-inline-metadata dd {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin: 0;
+}
+/*
+ * Style for padding around image and detail in Home page
+ */
+.views-field-mods-titleInfo-title-mt {
+  padding-bottom: 10px;
+}
+
+/* Style to highlight Title texts in results page */
+.dc-title, .fgs-label-s {
+	font-weight: bold;	
+}
+
+/* Style override, to control extra space in results table row */
+.islandora-solr-search-result {
+    /*display: inline-block;*/
+    /*margin: 0 0 1.5em;*/
+    display: inline;
+}
+
+/* Style to control Bookmarks in results page (top-right of the results table) */
+#block-islandora-solr-display-switch ul li.first {
+	display: none;
+}
+
+
+
+

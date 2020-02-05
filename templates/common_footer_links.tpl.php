@@ -3,7 +3,7 @@
 			<div class="container_24" id="uws-library-footer-center">
 				<div class="grid_6"><!-- UWS Footer Certificates -->
 					<div class="uws-library-footer-certificates">
-						<img alt="UWS Library ISO Certification Image" src="<?php global $base_path; print $base_path.path_to_theme(); ?>/images/uws-certificate.png">
+						<!--<img alt="UWS Library ISO Certification Image" src="<?php global $base_path; print $base_path.path_to_theme(); ?>/images/uws-certificate.png">-->
 					</div>
 				</div><!-- END UWS Footer Certificates -->
 				<div class="grid_12">
@@ -11,33 +11,30 @@
 						<!-- UWS Footer Footer Links -->
 						<ul class="menu">
 							<li>
-								<a title="Privacy Policy" href="http://www.uws.edu.au/footer/disclaimer_and_privacy">
+								<a title="Privacy Policy" href="https://www.westernsydney.edu.au/footer/privacy">
 									Privacy Policy
 								</a>
 							</li>
 							<li>
-								<a title="Sitemap" href="/uws_library/help/sitemap">
-									Sitemap
+								<a title="Copyright" href="https://www.westernsydney.edu.au/footer/copyright">
+									Copyright
 								</a>
 							</li>
 							<li>
-								<a title="Emergency Contact" href="http://www.uws.edu.au/footer/emergency_help">
+								<a title="Emergency Contact" href="http://www.westernsydney.edu.au/footer/emergency_help">
 									Emergency Contact
 								</a>
 							</li>
 							<li>
-								<a title="Library Contacts" href="http://library.uws.edu.au/uws_library/help/contact-us">
+								<a title="Library Contacts" href="http://library.westernsydney.edu.au/main/help/contact-us">
 									Library Contacts
 								</a>
 							</li>
 						</ul>
 					</div><!-- END UWS Footer Footer Links -->
-					<div class="uws_footer_copyright_info"><!-- UWS Footer Footer Copyright Information -->
+					<div class="uws_footer_copyright_info"><!-- Western Sydney University Footer Footer Copyright Information -->
 						<div class="content">
-							&copy;&nbsp; Copyright 2013
-							<a title="University of Western Sydney Library" href="/">
-								University of Western Sydney Library
-							</a>
+						<a href="http://library.westernsydney.edu.au/main" title="Western Sydney University">Western Sydney University</a> Copyright &copy; 2004-<?php print date('Y'); ?> ABN 53 014 069 881 CRICOS Provider No: 00917K
 						</div>
 					</div><!-- END UWS Footer Footer Copyright Information -->
 					<p>&nbsp;</p>
