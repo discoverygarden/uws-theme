@@ -997,3 +997,48 @@ button {
 	position: absolute;
 	margin-left: 5px;
 }
+
+#dialog-confirm b {
+	font-weight: bold;
+}
+
+#dialog-confirm i {
+	font-style: italic;
+}
+
+.ui-widget-header {
+	background: transparent;
+	border: none;
+}
+
+.ui-dialog-title {
+	display: none;
+}
+
+.ui-dialog a {
+	color: #ed0033;
+}
+
+.ui-dialog-titlebar-close {
+	border: none;
+	box-shadow: none;
+	background: none;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+	border: none;
+	background: none;
+}
+
+button.ui-dialog-titlebar-close {
+	display: none;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+	padding: 0;
+	margin: 0;
+}
+
+#dialog-confirm b {
+	line-height: 38px;
+}

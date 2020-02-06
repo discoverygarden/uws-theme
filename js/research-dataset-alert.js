@@ -11,10 +11,22 @@
                 if ($(research_block_link).length > 0) {
                     $(research_block_link).click(function(e) {
                         e.preventDefault();
-                        var confirm = window.confirm(settings.themec.research_data_text);
-                        if (confirm) {
-                            window.location.href = settings.themec.research_data_redirect;
-                        }
+                        var dialog_box_id = '#dialog-confirm';
+                        $(dialog_box_id).html(settings.themec.research_data_text);
+                        $(dialog_box_id).dialog({
+                            resizable: false,
+                            height: "auto",
+                            width: 400,
+                            modal: true,
+                            buttons: {
+                                "Ok": function() {
+                                    window.location.href = settings.themec.research_data_redirect;
+                                },
+                                Cancel: function() {
+                                    $(this).dialog("close");
+                                }
+                            }
+                        });
                     });
                 }
             });
