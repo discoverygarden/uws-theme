@@ -256,4 +256,6 @@ function themec_preprocess_page(&$variables) {
     ),
     array('type' => 'setting')
   );
+
+  drupal_add_library('system', 'ui.dialog');
 }
