@@ -1006,6 +1006,10 @@ button {
 	font-style: italic;
 }
 
+#dialog-confirm i.underline {
+	text-decoration: underline;
+}
+
 .ui-widget-header {
 	background: transparent;
 	border: none;
