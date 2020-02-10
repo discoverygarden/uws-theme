@@ -40,5 +40,5 @@ regions[sidebar_first] = Sidebar first
 regions[sidebar_second] = Sidebar second
 
 settings[shortcut_module_link] = 0
-settings[research_data_text] = <b>Western Sydney University users:</b> Please ensure that you have saved your progress and logged out of the <a title="Research Dashboard" target="_blank" href="https://research-data.westernsydney.edu.au/redbox/default/home">Researcher Dashboard</a> <i>before</i> searching for published datasets. <br><i>The Researcher Dashboard is used for data management planning and submission of data descriptions to ResearchDirect.</i>
+settings[research_data_text] = <b>Western Sydney University users:</b> Please ensure that you have saved your progress and logged out of the <a title="Research Dashboard" target="_blank" href="https://research-data.westernsydney.edu.au/redbox/default/home">Researcher Dashboard</a> <i class="underline">before</i> searching for published datasets. <br><i>The Researcher Dashboard is used for data management planning and submission of data descriptions to ResearchDirect.</i>
 settings[research_data_redirect] = https://research-data.westernsydney.edu.au/redbox/default/search
