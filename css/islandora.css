@@ -1,6 +1,6 @@
 /* Frontpage and Views */
 
-.submit-collection, .submit-collection-anon, .questions-block, #block-islandora-solr-simple, .manage-data, .submit-data-research {
+.submit-collection, .submit-collection-anon, .questions-block, #block-islandora-solr-simple, .manage-data, .submit-data-research, .researchdirect-faq {
   /*background: #00BAB9;*/
   background: #663399;
   float: right;
@@ -23,7 +23,7 @@
 	background-color: #006699 !important;
 }
 
-.submit-collection a, .submit-collection-anon a, .manage-data a, .submit-data-research a{
+.submit-collection a, .submit-collection-anon a, .manage-data a, .submit-data-research a, .researchdirect-faq a {
   color: #FFFFFF;
   display: block;
   text-align: center;
@@ -58,6 +58,11 @@
 /*.submit-collection a:hover, .submit-collection-anon a:hover {
 	color: #444;
 }*/
+
+.researchdirect-faq {
+  margin-top: 2.5rem;
+  background-color: #262223 !important;
+}
 
 #block-islandora-solr-simple  {
 	background: #fff;
@@ -428,7 +433,4 @@ dl.solr-fields {
 #block-islandora-solr-display-switch ul li.first {
 	display: none;
 }
-
-
-
 

@@ -1046,3 +1046,7 @@ button.ui-dialog-titlebar-close {
 #dialog-confirm b {
 	line-height: 38px;
 }
+
+.uws-search-query {
+  width: 65% !important;
+}

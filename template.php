@@ -242,4 +242,5 @@ function themec_preprocess_islandora_solr_metadata_display(array &$variables) {
  */
 function themec_form_islandora_solr_simple_search_form_alter(&$form, &$form_state, $form_id) {
   $form['simple']['islandora_simple_search_query']['#title'] = 'Search Publications';
+  $form['simple']['islandora_simple_search_query']['#attributes']['class'] = array('uws-search-query');
 }
